@@ -1,11 +1,11 @@
-# 🎉 UserMirrorer: Towards Preference-aligned LLM User Simulator
+# 🎉 [ACL 2026 Main] Mirroring Users: Towards Building Preference-aligned User Simulator with User Feedback in Recommendation
 
 
-<a href="https://github.com/UserMirrorer/UserMirrorer/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/UserMirrorer/UserMirrorer"></a>
-<a href="https://huggingface.co/datasets/MirrorUser/UserMirrorer"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Training_Set-yellow"></a>
-<a href="https://huggingface.co/datasets/MirrorUser/UserMirrorer-eval"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Eval_Set-yellow"></a>
-<a href="https://arxiv.org/abs/2508.18142"><img src="https://img.shields.io/badge/arXiv-2508.18142-orange"></a>
-<a href="https://huggingface.co/MirrorUser/UserMirrorrer-Llama-DPO"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint-red"></a>
+<a href="https://github.com/Joinn99/UserMirrorer/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Joinn99/UserMirrorer"></a>
+<a href="https://huggingface.co/datasets/Joinn/UserMirrorer"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Training_Set-yellow"></a>
+<a href="https://huggingface.co/datasets/Joinn/UserMirrorer-eval"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Eval_Set-yellow"></a>
+<a href="https://arxiv.org/abs/2508.18142"><img src="https://img.shields.io/badge/arXiv-2508.18142-green"></a>
+<a href="https://huggingface.co/Joinn/UserMirrorrer-Llama-DPO"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint-red"></a>
 
 ****
 
@@ -82,7 +82,7 @@ python usermirrorer/scene_sampling.py \
     --embedding_model_path <EMBEDDING_MODEL_PATH> \     # The path to the embedding model
     --eval_set \ # Whether to create the evaluation set # Whether to create the evaluation set
 ```
-Here the embedding model is used to embed the user and item features into a high-dimensional space, so that we can use the embedding model to calculate the similarity between the user and item features. We use `vLLM` as the backend, so you can use any other embedding model that [supports it](https://docs.vllm.ai/en/v0.6.2/models/supported_models.html).
+Here the embedding model is used to embed the user and item features into a high-dimensional space, so that we can use the embedding model to calculate the similarity between the user and item features. We use `vLLM` as the backend, so you can use any other embedding model that [supports it](https://docs.vllm.ai/en/latest/models/supported_models.html).
 
 Following the above command, you will get the user simulation scene for the dataset, which is stored in the `<YOUR_WORKING_DIR>/dataset` folder:
 ```shell
@@ -155,8 +155,8 @@ We use `torchtune` to fine-tune the LLM. You can refer to the `configs` folder f
 
 
 You can also access our derived datasets and fine-tuned models on the Hugging Face:
-- *Dataset*: [Train](https://huggingface.co/datasets/MirrorUser/UserMirrorer) and [Eval](https://huggingface.co/datasets/MirrorUser/UserMirrorer-eval)
-- *Fine-tuned Models*: Fine-tuned based on [Qwen2.5-3B-Instruct](https://huggingface.co/MirrorUser/UserMirrorrer-Qwen-DPO) and [Llama-3.2-3B-Instruct](https://huggingface.co/MirrorUser/UserMirrorrer-Llama-DPO)
+- *Dataset*: [Train](https://huggingface.co/datasets/Joinn/UserMirrorer) and [Eval](https://huggingface.co/datasets/Joinn/UserMirrorer-eval)
+- *Fine-tuned Models*: Fine-tuned based on [Qwen2.5-3B-Instruct](https://huggingface.co/Joinn/UserMirrorrer-Qwen-DPO) and [Llama-3.2-3B-Instruct](https://huggingface.co/Joinn/UserMirrorrer-Llama-DPO)
 
 > 
 
